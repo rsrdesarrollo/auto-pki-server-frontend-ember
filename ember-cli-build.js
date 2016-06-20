@@ -4,7 +4,12 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
     var app = new EmberApp(defaults, {
-        // Add options here
+        minifyCSS: {
+            enabled: false
+        },
+        minifyJS: {
+            enabled: false
+        }
     });
 
     // Use `app.import` to add additional libraries to the generated
@@ -23,8 +28,17 @@ module.exports = function(defaults) {
     app.import('bower_components/bootstrap/dist/css/bootstrap.css');
     app.import('bower_components/bootstrap/dist/css/bootstrap-theme.css');
 
+    app.import('bower_components/bootstrap-tokenfield/dist/css/bootstrap-tokenfield.css');
+    app.import('bower_components/bootstrap-tokenfield/dist/css/tokenfield-typeahead.css');
+
+    app.import('bower_components/jquery-ui/themes/base/jquery-ui.css');
+
     app.import('bower_components/jquery/dist/jquery.js');
     app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+
+    app.import('bower_components/jquery-ui/jquery-ui.js');
+
+    app.import('bower_components/bootstrap-tokenfield/dist/bootstrap-tokenfield.js');
 
     app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot', {
         destDir: 'fonts'

@@ -5,6 +5,8 @@
     "ember-cli-shims": "0.1.1",
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "bootstrap-tokenfield": "^0.12.1",
+    "jquery-ui": "^1.11.4"
   }
 }

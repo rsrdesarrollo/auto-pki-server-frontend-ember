@@ -1,0 +1,24 @@
+<table class="table">
+
+    <thead>
+    <tr>
+        <th>Common name</th>
+        <th>Finger print</th>
+        <th>IP</th>
+        <th>Approved</th>
+        <th>Deleted</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {{#each csrs as |csr|}}
+        <tr>
+            <td>{{csr.cn}}</td>
+            <td>{{csr.fprint}}</td>
+            <td>{{csr.reg_ip}}</td>
+            <td>{{input type="checkbox" checked=csr.is_approved}}</td>
+            <td>{{input type="checkbox" checked=csr.is_removed}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

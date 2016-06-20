@@ -1,2 +1,10 @@
-<h2>Users</h2>
-{{outlet}}
+<div class="col-lg-8 col-lg-offset-2">
+
+    <h2>Users</h2>
+
+    {{list-users users=model.users groups=model.groups}}
+
+    <div class="modal fade" id="modal" role="dialog">
+        {{outlet}}
+    </div>
+</div>

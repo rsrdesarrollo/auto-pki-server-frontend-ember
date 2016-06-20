@@ -1,2 +1,17 @@
-<h2>Requests</h2>
-{{outlet}}
+
+<div class="col-lg-8 col-lg-offset-2">
+
+    <h2>Requests</h2>
+
+
+    <div class="col-sm-4 col-sm-offset-8">
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-danger" {{action "deleteAll" model}}>Delete All</button>
+        <button type="button" class="btn btn-info" {{action "approveAll" model}}>Approve All</button>
+        <button type="button" class="btn btn-success" {{action "save" model}}>Save</button>
+    </div>
+    </div>
+
+    {{list-csrs csrs=model}}
+
+</div>
