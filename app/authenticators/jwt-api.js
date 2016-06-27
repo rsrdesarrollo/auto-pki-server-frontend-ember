@@ -22,7 +22,7 @@ export default Base.extend({
                     username: identification,
                     password: password
                 }),
-                contentType: 'application/json;charset=utf-8',
+                contentType: 'application/vnd.api+json;charset=utf-8',
                 dataType: 'json'
             }).then(function(response) {
                 Ember.run(function() {

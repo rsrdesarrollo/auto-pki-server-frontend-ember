@@ -4,6 +4,7 @@
     <h2>Requests</h2>
 
 
+    {{!-- Buttons for all
     <div class="col-sm-4 col-sm-offset-8">
     <div class="btn-group" role="group" aria-label="...">
         <button type="button" class="btn btn-danger" {{action "deleteAll" model}}>Delete All</button>
@@ -11,6 +12,7 @@
         <button type="button" class="btn btn-success" {{action "save" model}}>Save</button>
     </div>
     </div>
+    --}}
 
     {{list-csrs csrs=model}}
 
