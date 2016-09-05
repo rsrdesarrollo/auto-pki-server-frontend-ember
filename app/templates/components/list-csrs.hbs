@@ -5,31 +5,44 @@
         <th>Finger print</th>
         <th>IP</th>
         <th>Registration Date</th>
+        <th>State</th>
         <th>Action</th>
     </tr>
     </thead>
 
     <tbody>
     {{#each csrs as |csr|}}
-        {{#unless csr.is_removed}}
-            <tr>
-                <td>{{csr.cn}}</td>
-                <td>{{csr.fprint}}</td>
-                <td>{{csr.reg_ip}}</td>
-                <td>{{csr.reg_date}}</td>
-                <td>
-                    {{#unless csr.is_approved}}
-                        <button {{action "sign" csr}} class="btn btn-success">Sign</button>
-                        <button {{action "delete" csr}} class="btn btn-danger">Delete</button>
-                    {{else}}
-                        <span class="label label-info">
-                        <span class="glyphicon glyphicon-check"></span>
-                            Signed
-                        </span>
-                    {{/unless}}
-                </td>
-            </tr>
-        {{/unless}}
+        <tr>
+            <td>{{csr.cn}}</td>
+            <td>{{csr.fprint}}</td>
+            <td>{{csr.reg_ip}}</td>
+            <td>{{csr.reg_date}}</td>
+            <td>
+            {{#unless csr.is_approved}}
+                <span class="label label-warning">
+                    Pending approval
+                </span>
+            {{else}}
+                <span class="label label-info">
+                    Signed
+                </span>
+            {{/unless}}
+            </td>
+            <td>
+                {{#unless csr.is_approved}}
+                    <button {{action "sign" csr}} class="btn btn-success">
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                        Sign
+                    </button>
+                    <button {{action "delete" csr}} class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash"></span>
+                        Delete
+                    </button>
+                {{else}}
+
+                {{/unless}}
+            </td>
+        </tr>
     {{/each}}
     </tbody>
 </table>

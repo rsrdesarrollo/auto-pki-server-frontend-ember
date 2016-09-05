@@ -12,6 +12,7 @@ Router.map(function() {
   });
   this.route('csrs');
   this.route('about');
+  this.route('clients');
 });
 
 export default Router;

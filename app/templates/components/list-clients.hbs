@@ -1,0 +1,44 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th>Common name</th>
+        <th>Last Beacon</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {{#each clients as |client|}}
+        <tr>
+            <td>{{client.cn}}</td>
+            <td>{{client.last_beacon}}</td>
+            <td>
+                {{#unless client.revoked}}
+                    <span class="label label-success">
+                    <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+                    Active
+                </span>
+                {{else}}
+                    <span class="label label-danger">
+                    Revoked
+                </span>
+                {{/unless}}
+            </td>
+            <td>
+                {{#unless client.revoked}}
+                    <button {{action "revoke" client}} class="btn btn-warning ">
+                        <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+                        Revoke
+                    </button>
+                {{else}}
+                    <button {{action "delete" client}} class="btn btn-danger ">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        Delete
+                    </button>
+                {{/unless}}
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

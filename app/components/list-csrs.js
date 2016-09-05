@@ -9,8 +9,7 @@ export default Ember.Component.extend({
         },
         delete: function (csr) {
             console.log("Delete", csr.id);
-            csr.set('is_removed', true);
-            csr.save();
+            csr.destroyRecord();
         }
     }
 });
