@@ -14,7 +14,12 @@
     {{#each csrs as |csr|}}
         <tr>
             <td>{{csr.cn}}</td>
-            <td>{{csr.fprint}}</td>
+            <td>
+                <button {{action "show_fprint" csr}} class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">
+                    <span class="glyphicon glyphicon-qrcode"></span>
+                    {{csr.short_fprint}}
+                </button>
+            </td>
             <td>{{csr.reg_ip}}</td>
             <td>{{csr.reg_date}}</td>
             <td>
@@ -46,3 +51,25 @@
     {{/each}}
     </tbody>
 </table>
+
+<div id="myModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Common Name: {{selected.cn}}</h4>
+        </div>
+        <div class="modal-body">
+
+            <div id="fprint_qrcode"></div>
+            <h5 class="modal-title">{{selected.fprint}}</h5>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+</div>

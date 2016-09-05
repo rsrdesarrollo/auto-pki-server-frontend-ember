@@ -37,7 +37,9 @@ module.exports = function(defaults) {
     app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 
     app.import('bower_components/jquery-ui/jquery-ui.js');
+    app.import('bower_components/jquery-qrcode/jquery.qrcode.min.js');
 
+    app.import('bower_components/bootstrap-tokenfield/dist/bootstrap-tokenfield.js');
     app.import('bower_components/bootstrap-tokenfield/dist/bootstrap-tokenfield.js');
 
     app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot', {
