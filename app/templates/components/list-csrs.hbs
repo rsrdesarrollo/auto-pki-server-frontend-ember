@@ -39,13 +39,11 @@
                         <span class="glyphicon glyphicon-plus-sign"></span>
                         Sign
                     </button>
-                    <button {{action "delete" csr}} class="btn btn-danger">
-                        <span class="glyphicon glyphicon-trash"></span>
-                        Delete
-                    </button>
-                {{else}}
-
                 {{/unless}}
+                <button {{action "delete" csr}} class="btn btn-danger">
+                    <span class="glyphicon glyphicon-trash"></span>
+                    Delete
+                </button>
             </td>
         </tr>
     {{/each}}
