@@ -7,6 +7,8 @@
     "ember-qunit-notifications": "0.1.0",
     "bootstrap": "~3.1.1",
     "bootstrap-tokenfield": "^0.12.1",
-    "jquery-ui": "^1.11.4"
+    "jquery-ui": "^1.11.4",
+    "qrious": "^2.0.1",
+    "qrcode": "^1.0.2"
   }
 }

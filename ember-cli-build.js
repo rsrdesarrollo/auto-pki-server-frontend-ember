@@ -40,6 +40,8 @@ module.exports = function(defaults) {
 
     app.import('bower_components/bootstrap-tokenfield/dist/bootstrap-tokenfield.js');
 
+    app.import('bower_components/qrious/dist/umd/qrious.js');
+
     app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot', {
         destDir: 'fonts'
     });

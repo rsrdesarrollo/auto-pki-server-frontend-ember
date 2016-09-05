@@ -1,0 +1,11 @@
+<form {{action 'validate' on='submit'}} class="form-login">
+    <h2 class="form-login-heading">Please insert OTP</h2>
+
+    <label for="code" class="sr-only">One time password</label>
+    {{input value=password type="text" class="form-control" id="code" placeholder="OTP" required=true}}
+
+    {{#if errorMsg}}
+        <p class="bg-danger"><strong>OTP Verification failed:</strong> {{errorMsg}}</p>
+    {{/if}}
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+</form>

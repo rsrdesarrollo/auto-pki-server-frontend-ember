@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import { jwt_decode } from 'ember-cli-jwt-decode';
 import Base from 'ember-simple-auth/authenticators/base';
 
 export default Base.extend({

@@ -6,5 +6,7 @@ export default Model.extend({
     is_admin: attr('boolean'),
     last: attr('date'),
     attempts: attr('number'),
-    groups: attr()
+    groups: attr(),
+    needs_2f: attr('boolean'),
+    key_2f: attr('string')
 });

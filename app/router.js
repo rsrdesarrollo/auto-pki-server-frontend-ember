@@ -12,6 +12,11 @@ Router.map(function() {
   });
   this.route('csrs');
   this.route('about');
+  this.route('otp', function() {
+    this.route('activate');
+    this.route('deactivate');
+    this.route('validate');
+  });
 });
 
 export default Router;
