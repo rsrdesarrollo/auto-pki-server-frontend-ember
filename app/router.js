@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('csrs');
   this.route('about');
   this.route('clients');
+  this.route('error');
 });
 
 export default Router;

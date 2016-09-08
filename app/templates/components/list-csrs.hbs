@@ -34,16 +34,18 @@
             {{/unless}}
             </td>
             <td>
-                {{#unless csr.is_approved}}
-                    <button {{action "sign" csr}} class="btn btn-success">
-                        <span class="glyphicon glyphicon-plus-sign"></span>
-                        Sign
+                <div class="btn-group" role="group" aria-label="actions">
+                    {{#unless csr.is_approved}}
+                        <button {{action "sign" csr}} class="btn btn-success btn-sm">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                            Sign
+                        </button>
+                    {{/unless}}
+                    <button {{action "delete" csr}} class="btn btn-danger  btn-sm">
+                        <span class="glyphicon glyphicon-trash"></span>
+                        Delete
                     </button>
-                {{/unless}}
-                <button {{action "delete" csr}} class="btn btn-danger">
-                    <span class="glyphicon glyphicon-trash"></span>
-                    Delete
-                </button>
+                </div>
             </td>
         </tr>
     {{/each}}
