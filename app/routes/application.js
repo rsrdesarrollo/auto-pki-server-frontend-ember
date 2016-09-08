@@ -10,7 +10,7 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
         },
         error: function(error, transition) {
             console.log(error, transition);
-            let errorController = this.controllerFor("error")
+            let errorController = this.controllerFor("error");
             errorController.set("lastErrors", error.errors);
             this.transitionTo("error");
         }
